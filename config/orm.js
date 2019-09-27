@@ -28,12 +28,12 @@ var orm = {
         });
     },
 
-    updateOne: function (table, col, val, cb) {
+    updateOne: function (table, col, val1, val2, cb) {
         var queryString = "UPDATE ?? SET ?? = ? WHERE id = ?";
 
         console.log(queryString);
 
-        connection.query(queryString, [table, col, val], function (err, result) {
+        connection.query(queryString, [table, col, val1, val2], function (err, result) {
             if (err) {
                 throw err;
             }
