@@ -16,10 +16,9 @@
                     <form>
                         <div class="form-group">
                             <label for="data-burger-name">Burger Name</label>
-                            <input type="text" class="form-control" id="data-burger-name"
-                                placeholder="Enter burger name">
+                            <input type="text" class="form-control" id="data-burger-name" placeholder="Enter burger name">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" id="button-add">Submit</button>
                     </form>
                 </div>
             </div>
@@ -35,8 +34,7 @@
                     {{#unless devoured}}
                     <div class="card">
                         <div class="card-body">
-                            {{this.id}}. {{this.burger_name}} <button type="button" class="btn btn-primary float-right"
-                                id="button-devour">Devour</button>
+                            {{this.id}}. {{this.burger_name}} <button type="button" class="btn btn-primary float-right" id="button-devour" burger-id="{{this.id}}">Devour</button>
                         </div>
                     </div>
                     {{/unless}}
@@ -55,8 +53,7 @@
                         {{#if devoured}}
                         <div class="card">
                             <div class="card-body">
-                                {{this.id}}. {{this.burger_name}} <button type="button" class="btn btn-primary float-right"
-                                    id="button-devour" disabled>Devour</button>
+                                {{this.id}}. {{this.burger_name}} <button type="button" class="btn btn-primary float-right" id="button-devour" burger-id="{{this.id}}" disabled>Devour</button>
                             </div>
                         </div>
                         {{/if}}
@@ -67,3 +64,4 @@
 
     </div>
 </div>
+
